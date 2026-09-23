@@ -1,0 +1,158 @@
+/* ---------- banner ---------- */
+.party-banner {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: linear-gradient(160deg, #7c4dff 0%, #e040fb 55%, #ff6e40 100%);
+}
+
+.party-confetti {
+  position: absolute;
+  top: -6cqw;
+  width: 2.4cqw;
+  height: 3.6cqw;
+  border-radius: 0.4cqw;
+  animation: party-fall 3s linear infinite;
+}
+
+@keyframes party-fall {
+  from {
+    transform: translateY(0) rotate(0deg);
+  }
+  to {
+    transform: translateY(70cqw) rotate(540deg);
+  }
+}
+
+.party-banner-icons {
+  position: absolute;
+  right: 6cqw;
+  top: 14cqh;
+  display: flex;
+  gap: 2cqw;
+  font-size: 13cqw;
+  line-height: 1;
+}
+
+.party-banner-icons span {
+  display: inline-block;
+  animation: party-bounce 1.2s ease-in-out infinite;
+  filter: drop-shadow(0 1cqw 1.5cqw rgba(0, 0, 0, 0.35));
+}
+
+@keyframes party-bounce {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-6deg);
+  }
+  50% {
+    transform: translateY(-3cqw) rotate(6deg);
+  }
+}
+
+.party-banner-title {
+  position: absolute;
+  left: 6cqw;
+  bottom: 14cqh;
+  font-size: 14cqw;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #fff;
+  text-shadow:
+    0 0.6cqw 0 #4a148c,
+    0 1.2cqw 2cqw rgba(0, 0, 0, 0.35);
+}
+
+.party-banner-title b {
+  color: #ffd740;
+}
+
+.party-banner-sub {
+  position: absolute;
+  left: 6cqw;
+  bottom: 5cqh;
+  font-size: 3.2cqw;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0.3cqw 0.6cqw rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- menu ---------- */
+.party-menu {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, #7c4dff 0%, #e040fb 55%, #ff6e40 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: calc(30 * var(--px));
+}
+
+.party-menu h1 {
+  margin: 0;
+  font-size: calc(84 * var(--px));
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.03em;
+  text-shadow:
+    0 calc(5 * var(--px)) 0 #4a148c,
+    0 calc(10 * var(--px)) calc(18 * var(--px)) rgba(0, 0, 0, 0.35);
+}
+
+.party-menu h1 b {
+  color: #ffd740;
+}
+
+.party-grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: calc(16 * var(--px)) calc(22 * var(--px));
+}
+
+.party-grid .pill {
+  min-width: calc(330 * var(--px));
+  height: calc(84 * var(--px));
+  justify-content: flex-start;
+  gap: calc(16 * var(--px));
+  padding: 0 calc(26 * var(--px));
+}
+
+.party-icon {
+  font-size: calc(40 * var(--px));
+  line-height: 1;
+}
+
+.party-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: calc(24 * var(--px));
+  line-height: 1.1;
+}
+
+.party-name small {
+  font-size: calc(14 * var(--px));
+  font-weight: 600;
+  color: #888;
+}
+
+.party-foot {
+  position: absolute;
+  left: calc(50 * var(--px));
+  right: calc(50 * var(--px));
+  bottom: calc(36 * var(--px));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0 calc(2 * var(--px)) calc(4 * var(--px)) rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- in-game bits ---------- */
+.party-board {
+  display: flex;
+  gap: calc(10 * var(--px));
+}

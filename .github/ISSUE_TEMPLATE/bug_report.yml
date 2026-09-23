@@ -1,0 +1,57 @@
+name: Bug report
+description: Something in the console, a channel or the phone remote does not work
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happens
+      description: What you did, what you expected, what you got instead.
+      placeholder: I opened the bowling channel, swung the phone, and the ball never left my hand.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where
+      options:
+        - Wii Menu / console
+        - Phone remote or the phone ↔ PC link
+        - A channel or a game
+        - Sound or music
+        - Build, deploy or tooling
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: PC browser and OS
+      placeholder: Chrome 131 on Windows 11
+    validations:
+      required: true
+
+  - type: input
+    id: phone
+    attributes:
+      label: Phone and browser
+      description: Leave empty if you were playing with the mouse.
+      placeholder: iPhone 13, Safari 18
+
+  - type: textarea
+    id: console
+    attributes:
+      label: Browser console output
+      description: Errors and warnings from the PC tab, and from the phone if you can get them.
+      render: text
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I am on the latest `main` and ran `npm install`
+          required: true
+        - label: I checked that the problem is not caused by a file I dropped in `public/assets/`
+          required: true

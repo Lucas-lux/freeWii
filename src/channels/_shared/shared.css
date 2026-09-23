@@ -1,0 +1,211 @@
+.mg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+.mg-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mg-hud {
+  position: absolute;
+  top: calc(14 * var(--px));
+  left: calc(24 * var(--px));
+  right: calc(24 * var(--px));
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  pointer-events: none;
+  color: #fff;
+  font-weight: 800;
+  text-shadow: 0 calc(3 * var(--px)) 0 rgba(0, 0, 0, 0.45);
+}
+
+.mg-big {
+  font-size: calc(56 * var(--px));
+  font-weight: 900;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.mg-label {
+  font-size: calc(20 * var(--px));
+  margin-top: calc(4 * var(--px));
+}
+
+.mg-scores {
+  display: flex;
+  gap: calc(12 * var(--px));
+}
+
+.mg-score {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: calc(12 * var(--px));
+  padding: calc(6 * var(--px)) calc(14 * var(--px));
+  font-size: calc(22 * var(--px));
+  border-left: calc(8 * var(--px)) solid;
+  color: #333;
+  min-width: calc(120 * var(--px));
+  text-shadow: none;
+}
+
+.mg-score small {
+  display: block;
+  font-size: calc(13 * var(--px));
+  color: #666;
+}
+
+.mg-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: calc(10 * var(--px));
+  pointer-events: none;
+  animation: pop-in 0.35s ease-out both;
+}
+
+.mg-center-small {
+  font-size: calc(30 * var(--px));
+  font-weight: 800;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.45);
+  padding: calc(6 * var(--px)) calc(26 * var(--px));
+  border-radius: calc(30 * var(--px));
+}
+
+.mg-center-big {
+  font-size: calc(96 * var(--px));
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.02em;
+  text-shadow:
+    0 calc(6 * var(--px)) 0 #1d5fa8,
+    0 calc(12 * var(--px)) calc(22 * var(--px)) rgba(0, 0, 0, 0.5);
+}
+
+.mg-msg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 40%;
+  text-align: center;
+  font-size: calc(80 * var(--px));
+  font-weight: 900;
+  color: #fff;
+  text-shadow:
+    0 calc(6 * var(--px)) 0 #b02525,
+    0 calc(12 * var(--px)) calc(22 * var(--px)) rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  animation: pop-in 0.3s ease-out both;
+}
+
+.mg-over {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: calc(22 * var(--px));
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  animation: fade-in 0.4s ease-out both;
+}
+
+.mg-over h2 {
+  margin: 0;
+  font-size: calc(64 * var(--px));
+  font-weight: 900;
+}
+
+.mg-rating {
+  font-size: calc(40 * var(--px));
+  font-weight: 900;
+  color: #ffe64d;
+  margin-top: calc(-10 * var(--px));
+}
+
+.mg-over table {
+  font-size: calc(28 * var(--px));
+  border-collapse: collapse;
+}
+
+.mg-over td {
+  padding: calc(6 * var(--px)) calc(24 * var(--px));
+}
+
+.mg-over td:last-child {
+  text-align: right;
+  font-weight: 900;
+}
+
+.mg-hint {
+  position: absolute;
+  left: calc(150 * var(--px));
+  right: calc(150 * var(--px));
+  bottom: calc(34 * var(--px));
+  text-align: center;
+  color: #fff;
+  font-size: calc(18 * var(--px));
+  font-weight: 700;
+  text-shadow: 0 calc(2 * var(--px)) calc(4 * var(--px)) #000;
+  pointer-events: none;
+}
+
+.mg-quit {
+  position: absolute;
+  left: calc(24 * var(--px));
+  bottom: calc(24 * var(--px));
+}
+
+.mg-bar {
+  height: calc(22 * var(--px));
+  width: calc(280 * var(--px));
+  border-radius: calc(11 * var(--px));
+  background: rgba(0, 0, 0, 0.45);
+  border: calc(3 * var(--px)) solid rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+}
+
+.mg-bar i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #69f0ae, #ffd740, #ff5252);
+  transition: width 0.15s linear;
+}
+
+.fish-bonus {
+  display: flex;
+  align-items: center;
+  gap: calc(10 * var(--px));
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: calc(14 * var(--px));
+  padding: calc(6 * var(--px)) calc(16 * var(--px));
+  color: #333;
+  text-shadow: none;
+}
+
+.fish-bonus img {
+  width: calc(110 * var(--px));
+  height: calc(55 * var(--px));
+  object-fit: contain;
+}
+
+.fish-bonus b {
+  display: block;
+  font-size: calc(20 * var(--px));
+  color: #e65100;
+}
+
+.fish-bonus small {
+  font-size: calc(14 * var(--px));
+  color: #666;
+}

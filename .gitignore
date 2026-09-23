@@ -1,0 +1,17 @@
+node_modules
+dist
+.vercel
+.env
+.env.local
+*.local
+.DS_Store
+
+# Ripped third-party media kept locally only (never publish): raw downloads and the files placed in public/assets
+assets-src/
+public/assets/**/*.mp3
+public/assets/**/*.ogg
+public/assets/**/*.wav
+public/assets/**/*.png
+public/assets/**/*.jpg
+public/assets/**/*.webm
+public/assets/**/*.mp4

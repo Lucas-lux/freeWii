@@ -1,0 +1,263 @@
+/* ---------- phone remote ---------- */
+.rc-connect {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 24px 20px;
+  background: #111;
+  color: #eee;
+  text-align: center;
+}
+
+.rc-connect h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.rc-connect h1 span {
+  color: #45b6ff;
+}
+
+.rc-connect p {
+  margin: 0;
+  max-width: 360px;
+  color: #bbb;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.rc-code,
+.rc-name {
+  width: 240px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 2px solid #333;
+  background: #1c1c1c;
+  color: #fff;
+  font-family: inherit;
+  text-align: center;
+  outline: none;
+}
+
+.rc-code {
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+
+.rc-code:focus,
+.rc-name:focus {
+  border-color: #45b6ff;
+}
+
+.rc-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.rc-connect-btn {
+  margin-top: 6px;
+  padding: 14px 44px;
+  border: none;
+  border-radius: 30px;
+  background: #45b6ff;
+  color: #04213a;
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.rc-connect-btn:disabled {
+  opacity: 0.6;
+}
+
+.rc-msg {
+  color: #9ad;
+}
+
+.rc-msg--error {
+  color: #ff7b7b;
+}
+
+.rc-help {
+  color: #777 !important;
+  font-size: 13px !important;
+}
+
+/* ---------- the pad ---------- */
+.rc {
+  min-height: 100%;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 12px 28px;
+  touch-action: none;
+  overscroll-behavior: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.rc-body {
+  width: min(100%, 300px);
+  background: linear-gradient(180deg, #fafafa, #e9e9e9);
+  border-radius: 40px;
+  padding: 22px 26px 26px;
+  box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.6),
+    inset 0 0 0 3px #d5d5d5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.rc-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #777;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.rc-power {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #d8d8d8;
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.rc-player {
+  color: #45b6ff;
+}
+
+.rc-btn {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, #ececec, #cfcfcf);
+  border-radius: 50%;
+  color: #555;
+  font-weight: 900;
+  box-shadow:
+    0 3px 0 #a9a9a9,
+    inset 0 1px 0 #fff;
+  touch-action: none;
+}
+
+.rc-btn--down {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #a9a9a9;
+  background: linear-gradient(180deg, #c9dcf5, #9fc2ee);
+  color: #1b3d66;
+}
+
+.rc-dpad {
+  display: grid;
+  grid-template-columns: repeat(3, 52px);
+  grid-template-rows: repeat(3, 52px);
+}
+
+.rc-dpad .rc-btn {
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.rc-up {
+  grid-area: 1 / 2;
+}
+.rc-left {
+  grid-area: 2 / 1;
+}
+.rc-right {
+  grid-area: 2 / 3;
+}
+.rc-down {
+  grid-area: 3 / 2;
+}
+.rc-dpad-center {
+  grid-area: 2 / 2;
+  background: #cfcfcf;
+  box-shadow: none;
+}
+
+.rc-a {
+  width: 110px;
+  height: 110px;
+  font-size: 44px;
+}
+
+.rc-row {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.rc-small {
+  width: 50px;
+  height: 50px;
+  font-size: 22px;
+}
+
+.rc-b {
+  width: 100%;
+  height: 96px;
+  border-radius: 26px;
+  font-size: 40px;
+  background: linear-gradient(180deg, #e2e2e2, #bdbdbd);
+}
+
+.rc-leds {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.rc-led {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: #bbb;
+}
+
+.rc-led--on {
+  background: #45b6ff;
+  box-shadow: 0 0 8px #45b6ff;
+}
+
+.rc-tools {
+  display: flex;
+  gap: 10px;
+}
+
+.rc-tools button {
+  background: #222;
+  color: #ddd;
+  border: 1px solid #444;
+  border-radius: 22px;
+  padding: 10px 18px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.rc-warn {
+  max-width: 340px;
+  background: #3b2a12;
+  color: #ffd48a;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  text-align: center;
+  line-height: 1.4;
+}

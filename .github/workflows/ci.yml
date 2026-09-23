@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Type-check and build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Type-check
+        run: npm run typecheck
+
+      - name: Build
+        run: npm run build
+
+      - name: Fail if copyrighted media slipped in
+        run: |
+          found=$(git ls-files 'public/assets/**' \
+            | grep -Ei '\.(mp3|ogg|wav|m4a|png|jpg|jpeg|webm|mp4|dae|obj)$' || true)
+          if [ -n "$found" ]; then
+            echo "::error::Media files must not be committed, they are git-ignored on purpose:"
+            echo "$found"
+            exit 1
+          fi
+          echo "No media committed under public/assets."

@@ -1,0 +1,236 @@
+/* ---------- banner ---------- */
+.mii-banner {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, #e3f2fd 0%, #bbdefb 100%);
+}
+
+.mii-banner-crowd {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mii-banner-title {
+  position: absolute;
+  left: 6cqw;
+  bottom: 12cqh;
+  font-size: 14cqw;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #2d3e55;
+  text-shadow: 0 0.6cqw 0 rgba(255, 255, 255, 0.8);
+}
+
+.mii-banner-title b {
+  color: #1e88e5;
+}
+
+.mii-banner-sub {
+  position: absolute;
+  left: 6cqw;
+  bottom: 4cqh;
+  font-size: 3.2cqw;
+  font-weight: 700;
+  color: #4b6480;
+}
+
+/* ---------- app ---------- */
+.mii {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #e3f2fd 0%, #bbdefb 100%);
+  color: #2d3e55;
+  display: grid;
+  grid-template-columns: calc(190 * var(--px)) 1fr calc(430 * var(--px));
+  grid-template-rows: 1fr calc(150 * var(--px));
+  gap: calc(14 * var(--px));
+  padding: calc(16 * var(--px)) calc(24 * var(--px));
+  user-select: none;
+}
+
+.mii-cats {
+  display: flex;
+  flex-direction: column;
+  gap: calc(5 * var(--px));
+  overflow: hidden;
+}
+
+.mii-cat {
+  display: flex;
+  align-items: center;
+  gap: calc(8 * var(--px));
+  padding: calc(4 * var(--px)) calc(12 * var(--px));
+  border-radius: calc(12 * var(--px));
+  background: rgba(255, 255, 255, 0.7);
+  border: calc(2 * var(--px)) solid transparent;
+  font-size: calc(16 * var(--px));
+  font-weight: 800;
+  transition: transform 0.1s;
+}
+
+.mii-cat--hover {
+  border-color: #7cc4ff;
+  transform: scale(1.04);
+}
+
+.mii-cat--active {
+  background: #fff;
+  border-color: #1e88e5;
+}
+
+.mii-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: calc(8 * var(--px));
+}
+
+.mii-preview canvas {
+  width: calc(440 * var(--px));
+  height: calc(440 * var(--px));
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 calc(10 * var(--px)) calc(30 * var(--px)) rgba(0, 0, 0, 0.18);
+}
+
+.mii-preview-name {
+  font-size: calc(26 * var(--px));
+  font-weight: 900;
+}
+
+.mii-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-content: start;
+  gap: calc(10 * var(--px));
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: calc(18 * var(--px));
+  padding: calc(14 * var(--px));
+}
+
+.mii-options h3 {
+  grid-column: 1 / -1;
+  margin: 0 0 calc(4 * var(--px));
+  font-size: calc(20 * var(--px));
+}
+
+.mii-option {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: calc(14 * var(--px));
+  background: #fff;
+  border: calc(3 * var(--px)) solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.1s;
+}
+
+.mii-option canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.mii-option--hover {
+  border-color: #7cc4ff;
+  transform: scale(1.06);
+}
+
+.mii-option--active {
+  border-color: #1e88e5;
+  box-shadow: 0 0 0 calc(3 * var(--px)) rgba(30, 136, 229, 0.3);
+}
+
+.mii-option--swatch {
+  aspect-ratio: 2 / 1;
+}
+
+.mii-plaza {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: calc(12 * var(--px));
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: calc(18 * var(--px));
+  padding: calc(10 * var(--px)) calc(16 * var(--px));
+}
+
+.mii-plaza-title {
+  font-size: calc(18 * var(--px));
+  font-weight: 900;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: #4b6480;
+}
+
+.mii-plaza-list {
+  flex: 1;
+  display: flex;
+  gap: calc(10 * var(--px));
+  overflow: hidden;
+}
+
+.mii-plaza-item {
+  width: calc(110 * var(--px));
+  height: calc(110 * var(--px));
+  border-radius: calc(14 * var(--px));
+  background: #fff;
+  border: calc(3 * var(--px)) solid transparent;
+  overflow: hidden;
+  flex: 0 0 auto;
+  transition: transform 0.1s;
+}
+
+.mii-plaza-item canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.mii-plaza-item--hover {
+  border-color: #7cc4ff;
+  transform: scale(1.06);
+}
+
+.mii-plaza-item--active {
+  border-color: #1e88e5;
+}
+
+.mii-plaza-empty {
+  color: #7a8ea3;
+  font-weight: 700;
+  font-size: calc(16 * var(--px));
+}
+
+.mii-actions {
+  display: flex;
+  flex-direction: column;
+  gap: calc(6 * var(--px));
+}
+
+.mii-actions .pill {
+  min-width: calc(170 * var(--px));
+  height: calc(40 * var(--px));
+  padding: 0 calc(16 * var(--px));
+  font-size: calc(16 * var(--px));
+}
+
+.mii-toast {
+  position: absolute;
+  left: 50%;
+  top: calc(20 * var(--px));
+  transform: translateX(-50%);
+  padding: calc(8 * var(--px)) calc(22 * var(--px));
+  border-radius: calc(20 * var(--px));
+  background: rgba(45, 62, 85, 0.9);
+  color: #fff;
+  font-size: calc(20 * var(--px));
+  font-weight: 800;
+  pointer-events: none;
+}

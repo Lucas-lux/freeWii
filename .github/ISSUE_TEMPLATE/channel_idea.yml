@@ -1,0 +1,44 @@
+name: Channel or game idea
+description: Suggest a new channel, a new mini-game or a feature
+labels: [idea]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+      description: What the channel or game does, and what makes it fun with a phone in your hand.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: control
+    attributes:
+      label: How do you play it?
+      multiple: true
+      options:
+        - Pointing at the screen
+        - Swinging or shaking the remote
+        - Tilting the remote
+        - Buttons only
+        - Several remotes at once
+    validations:
+      required: true
+
+  - type: dropdown
+    id: help
+    attributes:
+      label: Would you like to build it?
+      options:
+        - I want to build it myself
+        - I would like help building it
+        - I am only suggesting it
+    validations:
+      required: true
+
+  - type: textarea
+    id: assets
+    attributes:
+      label: Assets
+      description: >
+        Remember that nothing copyrighted can enter the repository. If the game needs graphics or
+        sound, say how they would be produced or which free licence they come under.

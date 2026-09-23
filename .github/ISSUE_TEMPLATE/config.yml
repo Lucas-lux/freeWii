@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: How do I write a channel?
+    url: https://github.com/Lucas-lux/freeWii/blob/main/src/channels/README.md
+    about: The channel API, the shared mini-game shell and a minimal example.
+  - name: Which asset files can I drop in?
+    url: https://github.com/Lucas-lux/freeWii/blob/main/public/assets/README.md
+    about: Every optional image, sample and music file, with its exact path.
